@@ -1,0 +1,42 @@
+<%- include ('partials/header-login') %>
+
+
+<div class="container">
+
+<p class="fs-2 fw-bold"><%= product.pname %></p>
+<p><img src="/images/<%=product.pname%>.jpg" /></p>
+<button value="<%=product._id%>" class="btn btn-warning fs-5 fw-bold mt-3 mb-3 addcart">Add to Cart</button>
+<p class="fs-5 fw-bold">Type: <%= product.ptype %></p>
+<p class="fs-5 fw-bold">Brand: <%= product.pbrand %></p>
+<p class="fs-5 fw-bold">Composition: <%= product.pcomposition %></p>
+<p class="fs-5 fw-bold">Quantity: <%= product.pquantity %></p>
+<p class="fs-5 fw-bold">Symptoms: <%= product.psymptoms %></p>
+<p class="fs-5 fw-bold">Decription: <%= product.pdesc %></p>
+<p class="fs-5 fw-bold">Price: <%= product.price %> USD</p>
+
+
+<div class="form-group">
+<form action="/products/<%= product._id %>" method="POST">
+
+<% if (administrator) { %>
+<a class="btn btn-warning fs-5 fw-bold" href="/products/<%= product._id %>/edit" role="button">
+Modify Product Inventory</a>
+<button type="submit" class="btn btn-warning fs-5 fw-bold">Mark Deleted</button>
+<% } %>
+
+<a class="btn btn-warning fs-5 fw-bold" href="/" role="button">Homepage</a>
+</form>
+
+</div>
+
+
+<!-- <form action="/products/<%= product._id %>?_method=DELETE" method="POST">
+<a class="btn btn-warning" href="/products/<%= product._id %>/edit" role="button">
+Modify Product Inventory</a>
+<button type="submit" class="btn btn-warning">Mark Deleted</button>
+<a class="btn btn-warning" href="/" role="button">Homepage</a>
+
+</form> -->
+
+</div>
+<%- include ('partials/footer') %>

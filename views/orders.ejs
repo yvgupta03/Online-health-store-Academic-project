@@ -1,0 +1,33 @@
+<%- include ('partials/header-login') %>
+<div class="container">    
+    <div class="row">   
+      <p class="fs-4 fw-bold">Order History</p>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Products Purchased</th>
+            <th>Order Cost (in USD)</th>
+            <th>Phone</th>
+            <th>Delivery Address</th>
+            <th>Order Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% results.forEach(function(orders){ %>
+            <tr>
+              <td><%=orders.email%></td>
+              <td><%=orders.pname%></td>
+              <td><%=orders.gtotal%></td>
+              <td><%=orders.phone%></td>
+              <td><%=orders.address%></td>
+              <td><%=orders.date%></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+    <a href="/" class="btn btn-warning fw-bold">Homepage</a>
+    
+</div>
+<%- include ('partials/footer') %>

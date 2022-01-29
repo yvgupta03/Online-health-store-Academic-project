@@ -1,0 +1,74 @@
+<%- include ('partials/header-register') %>
+  <div class="container">
+    <div>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6"> <h3 class="d-flex justify-content-center">User Sign-Up/Register Page</h3>
+
+        <% if (errorlog) { %>
+        <p class="error mt-3 d-flex justify-content-center"> User already exists. Please try again with new credentials or Sign-in as existing user</p>
+        <%} %>
+
+        <form id="myForm" role="form" action="/register" method="post">
+        <div class="form-group mb-2">
+        <label for="username">Email:</label>
+        <input type="text" name="username" class="form-control" placeholder="Enter e-mail" id="email" required>
+        </div>
+
+
+        <div class="form-group mb-2">
+        <label for="pwd">Password:</label>
+        <input type="password" name="password" class="form-control" placeholder="Create password" id="pwd" required>
+        </div>
+
+        <div class="form-group mb-2">
+        <label for="confirm">Confirm Password:</label>
+        <input type="password" class="form-control" placeholder="Confirm password" id="confirm" required>
+        </div>
+
+        <div class="form-group mb-2">
+        <label for="fname">First-Name:</label>
+        <input type="text" name="firstname" class="form-control" placeholder="Enter first name" id="fname" required>
+        </div>
+
+        <div class="form-group mb-2">
+        <label for="lname">Last-Name:</label>
+        <input type="text" name="lastname" class="form-control" placeholder="Enter last name" id="lname" required>
+        </div>
+
+        <div class="md-form md-outline input-with-post-icon datepicker mb-2">
+          <i class="fas fa-calendar input-prefix" tabindex=0></i>
+          <label for="birthdate">Birthdate:</label>      
+          <input placeholder="Select birthdate" name="birthdate" type="date" min="1960-11-30" max="2003-11-30" id="birthdate" class="form-control" id="birthdate" required>      
+        </div>
+
+        <div class="form-group mb-2">
+        <label for="phone">Phone No:</label>
+        <input type="tel" name="phone" class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter phone no." id="phone" maxlength="12" minlength="12" required>
+        </div>
+
+        <div class="form-group mb-2">
+        <label for="address">Address:</label>
+        <input type="text" name="address" class="form-control" placeholder="Enter address" id="address" maxlength="80" required>
+        </div>
+
+        <div class="form-group mb-2">
+        <label for="address">Admin key:</label>
+        <input type="password" name="admin" class="form-control" placeholder="Enter admin key" id="admin" maxlength="7">
+        </div>
+
+
+        <button type="submit" class="btn btn-warning">Submit</button>
+        <a href="/"><button type="button" class="btn btn-warning mx-4">Cancel</button></a>
+        </form>
+
+        </div>  
+        
+        <div class="col-md-3"></div>
+        
+      </div>
+    </div>
+    
+  </div>
+
+<%- include ('partials/footer-register') %>

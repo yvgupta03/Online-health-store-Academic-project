@@ -1,0 +1,74 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/javascripts/main.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+.nav-link{
+
+	color: grey;
+}
+</style>
+</head>
+
+<body>
+
+
+<ul class="nav navbar navbar-expand-lg navbar-dark bg-dark">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+</ul>
+
+
+
+<div>
+  <div class="row">
+    <div class="col-md-2 bg-light">Side menu</div>
+    <div class="col-md-10">
+    	<h6> Video List </h6> 
+		<ul id="videolist"></ul>
+	
+
+		<!-- New video form: form for inserting a new video. Button click is defined in main.js. -->
+
+		<h6 style="clear:left;"> New Video </h6>
+
+		<form >
+			<div class="form-group col-md-2">
+			<label>Title</label>
+			<input type="text" id="title" class="form-control">
+			</div>
+			<div class="form-group col-md-2">
+			<label>Genre</label>
+			<input type="text" id="genre" class="form-control">
+			</div>
+			<div class="form-group col-md-2">
+			<label>Desc</label>
+			<textarea id="desc" class="form-control">
+			</textarea>
+			</div>
+			<div class="form-group col-md-2">
+			<button id="add" class="btn btn-outline-dark">Add Video</button>
+			</div>
+
+		</form>
+	
+
+	</div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
+
+

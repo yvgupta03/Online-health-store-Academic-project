@@ -1,0 +1,151 @@
+
+*{
+	box-sizing: border-box;
+}
+
+.container{
+	max-width: 1000px;
+	margin: auto;
+}
+.gallery{
+	width: 100%;
+	float: left;
+	padding:30px 15px;
+}
+.gallery .title h1{
+	font-size:36px;
+	margin:0 0 30px;
+	color:#000000;
+	text-align: center;
+}
+.gallery .gallery-items .item{
+	float: left;
+	width:25%;
+	position: relative;
+}
+.gallery .gallery-items .item.hide{
+	display: none;
+}
+.gallery .gallery-items .item.show{
+	display: block;
+	animation: show .5s ease;
+}
+@keyframes show{
+    0%{
+    	opacity:0;
+    	transform: scale(0.9);
+    }
+    100%{
+    	opacity:1;
+    	transform: scale(1);
+    }
+}
+
+
+.gallery .gallery-items .item img{
+	width: 100%;
+	display: block;
+}
+.gallery .gallery-items .item .caption{
+	position: absolute;
+	left:0px;
+	bottom:0;
+	background-color: rgba(0,0,0,.5);
+	padding:10px;
+	width: 100%;
+	color:#ffffff;
+	text-align: center;
+}
+.gallery .pagination{
+	width: 100%;
+	float: left;
+	padding:15px;
+	text-align: center;
+}
+.gallery .pagination div{
+	display: inline-block;
+	margin:0 10px;
+}
+.gallery .pagination .page{
+	color:gray;
+}
+.gallery .pagination .prev,.gallery .pagination .next{
+ color:#000;
+ border:1px solid #000;
+ font-size:15px;
+ padding:7px 15px;
+ cursor: pointer;
+}
+
+.gallery .pagination .prev.disabled,
+.gallery .pagination .next.disabled{
+	border-color: gray;
+	color:gray;
+	pointer-events: none;
+}
+
+a.list-group-item.active{
+	background-color: #4d94ff;        
+  }
+  a.list-group-item{
+	color: #3385ff;
+  }
+  a.list-group-item-action:hover{
+	color: #38668E;
+	text-decoration: underline;
+	background-color: #fff;
+  }
+  a.list-group-item.active:hover{
+	color: #fff;
+	text-decoration: underline;
+	background-color: #4d94ff;
+  }
+  .custom-search-button-color{
+	color: #fff;
+	background-color: #e65c00;
+  }
+  .img-title-text{
+	color: #595959;
+	font-family: "Gill Sans", sans-serif;
+  }
+
+  .col-md-3>.card{
+	margin-bottom: 29px;
+  }
+  .col-md-9>.card{
+	margin-bottom: 29px;
+	margin-right: 25px;
+  }
+  #images {
+	  margin-left: 10px;
+	  margin-right: 200px;
+  }
+  .sm-img {
+	  padding: 10px;
+  }
+  .pagination {
+	  display: inline-block;
+  }
+  
+  .pagination a {
+	  color: black;
+	  float: left;
+	  padding: 8px 16px;
+	  text-decoration: none;
+	  transition: background-color .3s;
+	  border: 1px solid #ddd;
+  }
+  
+  .pagination a.active {
+	  background-color: #4CAF50;
+	  color: white;
+	  border: 1px solid #4CAF50;
+  }
+
+	.pagination a:hover:not(.active) {background-color: #ddd;}
+	.btn btn-outline-light{
+	width :25%;
+	height : 25%;
+	padding: 5px 6px;
+  }
+

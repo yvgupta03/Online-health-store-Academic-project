@@ -1,0 +1,28 @@
+body{
+    background-color: #d9d9d9;
+  }
+  .navbar{
+    padding: 28px 0px;
+  }
+  .navbar-custom-blue{
+    background-color: #003380;
+  }
+  .custom-text-font{
+    color: #595959;
+    font-family: "Gill Sans", sans-serif;
+  }
+  .custom-brand-title-font{
+    color: #ffffff;
+    font-family: "Font Awesome 5 Pro";
+    }
+  
+  .top-rightside-menu-color, .bottom-footer-color{
+    background-color: #031424;
+  }
+  .remove-borders{
+    border-style: none;
+  }
+  
+  
+  
+  

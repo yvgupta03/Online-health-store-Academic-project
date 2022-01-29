@@ -1,0 +1,34 @@
+<%- include ('partials/header-login-no-bar') %>
+<div class="container">
+  <div>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"> <h3 class="d-flex justify-content-center">User Login Page</h3>     
+
+      <form id="myForm" role="form" action="/login" method="post">
+      <div class="form-group mb-2">
+      <label for="username">Email:</label>
+      <input type="text" name="username" class="form-control" placeholder="Email" id="email-login">
+      </div>
+
+
+      <div class="form-group  mb-3">
+      <label for="pwd">Password:</label>
+      <input type="password" name="password" class="form-control" placeholder="Password" id="pwd-login">
+      </div>
+
+      <button type="submit" class="btn btn-warning">Submit</button>
+      <a href="/"><button type="button" class="btn btn-warning mx-4">Cancel</button></a>
+      <% if (errorlog) { %>
+        <p class="error mt-3 d-flex justify-content-center"> Invalid credentials. Please try again with valid credentials.</p>
+      <%} %>
+      </form>
+      
+      </div>  
+      
+      <div class="col-md-3"></div>
+      
+    </div>
+  </div>
+</div>
+<%- include ('partials/footer-register') %>
